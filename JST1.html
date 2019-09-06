@@ -62,8 +62,20 @@
         </button>
         <!-- 4th button to run the MadLib game based on words input in list above -->
         <button type="submit" class="btn-lg" onclick="madLibGenerator()">
-          MadLib
-        </button>
+          MadLib</button
+        ><br /><br />
+        <!-- additional breaks -->
+        <!-- prepare the output area for results from MadLib game -->
+        <div class="input-group">
+          <!-- prepare the prepand for output text area -->
+          <div class="input-group-prepand">
+            <!-- define the span of output area -->
+            <span class="input-group-text">Output</span>
+          </div>
+          <!-- create the actual text area with id for identification, 18 rows of 
+          one size and form-control for styling -->
+          <textarea id="output1" rows="18" class="form-control"></textarea>
+        </div>
       </div>
     </div>
 
