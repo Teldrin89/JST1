@@ -1,0 +1,14 @@
+/* introduce additional formating of the web page with css */
+/* edit jumbotron container properties */
+.jumbotron{
+    background-color: rgb(93, 91, 207);
+    color: white;
+}
+/* edit textarea height */
+.textarea{
+    height: 200px;
+} 
+/* edit html document font size */
+htm{
+    font-size: 1.2em;
+}
