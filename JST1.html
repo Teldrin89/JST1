@@ -29,8 +29,41 @@
         <form class="form-inline">
           <!-- create input types for user to fill out, user will fill out the 
           text with set up class for the formating, incrementing the id and naming the input, starting from "Person" -->
+          <!-- the formating is handled by form-control class, each input has individual id and default text put in value -->
           <input type="text" class="form-control" id="i0" value="Person" />
+          <input type="text" class="form-control" id="i1" value="Noun" />
+          <input type="text" class="form-control" id="i2" value="Verb" />
+          <input type="text" class="form-control" id="i3" value="Verb" />
+          <input type="text" class="form-control" id="i4" value="Verb" />
+          <input type="text" class="form-control" id="i5" value="Verb" />
+          <input type="text" class="form-control" id="i6" value="Plural Verb" />
+          <input type="text" class="form-control" id="i7" value="Verb" />
+          <input type="text" class="form-control" id="i8" value="Adjective" />
+          <input type="text" class="form-control" id="i9" value="Noun" />
+          <input type="text" class="form-control" id="i10" value="Event" />
+          <input type="text" class="form-control" id="i11" value="Noun" />
+          <input type="text" class="form-control" id="i12" value="Body Part" />
+          <input type="text" class="form-control" id="i13" value="Noun" />
         </form>
+        <br /><br />
+        <!-- insert caple of breaks -->
+        <!-- put some buttons for each of the functions -->
+        <!-- first button will simply show alert in browser that says 'Hello' -->
+        <button type="submit" class="btn-lg" onclick="alert('Hello')">
+          Hello
+        </button>
+        <!-- 2nd button for calculation of Pi value using JS script function -->
+        <button type="submit" class="btn-lg" onclick="calcPI()">
+          Get PI(e)
+        </button>
+        <!-- 3rd button for calculation of Fibonacci List using JS function -->
+        <button type="submit" class="btn-lg" onclick="getFibList()">
+          Fib List
+        </button>
+        <!-- 4th button to run the MadLib game based on words input in list above -->
+        <button type="submit" class="btn-lg" onclick="madLibGenerator()">
+          MadLib
+        </button>
       </div>
     </div>
 
