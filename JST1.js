@@ -14,6 +14,10 @@ function calcPI(iter){
     let pi = 0, divisor = 1;
     // note: java scrip has a precision of up to 16 digits only
     
+    // set up iter as user input
+    var iter = prompt("Please set number of iterations for Pi calculation: ", 
+    "10000");
+
     /*  set a for loop with i as iteration number, starting from 0, going up to
         number of iterations set as input, incrementing by 1
     */
