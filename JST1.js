@@ -9,7 +9,7 @@ mulitiline comments
     to make this type of calculation the functio will use a "for" loop and 
     input variable in form of number of iterations
 */
-function calcPi(iter){
+function calcPI(iter){
     // define initial pi and divisor values
     let pi = 0, divisor = 1;
     // note: java scrip has a precision of up to 16 digits only
@@ -23,5 +23,6 @@ function calcPi(iter){
         // increment the divisor value accordingly
         divisor += 4;
     }
-
+    // put output of the function in output area of html doc
+    document.getElementById("output1").value = pi.toFixed(10);
 }
