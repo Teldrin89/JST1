@@ -27,6 +27,36 @@ function calcPI(iter){
         // increment the divisor value accordingly
         divisor += 4;
     }
-    // put output of the function in output area of html doc
+    // put output (rounded to 10dig) of the function in output area of html doc
     document.getElementById("output1").value = pi.toFixed(10);
+}
+
+// initialize an array that will store the values
+let fibList = [];
+// function to generate and write Fibonacci List
+function getFibList(howMany){
+    // Fibonacci List is a list that has this kind of pattern: 1, 1, 2, 3, 5...
+    // so the one number we are at and one before create the next one
+
+    // the function takes single input as to how many of numbers shall be in this list
+    // run for loop till input value to run a separate function that will get the
+    // specific number in the list
+    for(i = 0; i < howMany; i++){
+        // put itmes in previously set array
+        fibList[i] = fib(i);
+    }
+}
+
+// fib function that generates specific number of Fibonacci List
+function fib(whichNum){
+    // setup few variables for the calculation
+    let num1 = 1, num2 = 0, temp, i = 0;
+    
+    // calculate the specific number with while loop
+    while(i < whichNum){
+        temp = num1;
+        num1 = num1 + num2;
+        num2 = temp;
+        i++;
+    }
 }
