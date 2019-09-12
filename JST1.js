@@ -45,6 +45,11 @@ function getFibList(howMany){
         // put itmes in previously set array
         fibList[i] = fib(i);
     }
+    // shift the list to ommit the 1st entry - "0"
+    fibList.shift();
+    // in case of removal of last entry use "pop", in case of specific - "splice"
+    // output the results to the output box, separating them by comma and space
+    document.getElementById("output1").value = fibList.join(", ")
 }
 
 // fib function that generates specific number of Fibonacci List
@@ -54,9 +59,15 @@ function fib(whichNum){
     
     // calculate the specific number with while loop
     while(i < whichNum){
+        // start up the value with 1, store it in temporary
         temp = num1;
+        // new num1 is the incremented value
         num1 = num1 + num2;
+        // new num2 is equal to temp
         num2 = temp;
+        // increment
         i++;
     }
+    // result of function
+    return num2;
 }
