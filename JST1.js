@@ -76,7 +76,10 @@ function fib(whichNum){
 // define the text of the story - each "\n" means new line, each "~" is input
 let mLText = "My dear old ~ sat me down to hear some words of wisdom \n 1. Give a man  a ~ and you ~ him for a day ~ a man to ~ and he'll ~ forever \n 2. He who ~ at the right time can ~ again \n 3. Always wear ~ ~ in case you're in a ~ \n 4. Don't use your ~ to wipe your ~ Always have a clean ~ with you";
 
-// convert string into an array
+// convert string into an array - splitting with " "
+let mLArray = mLText.split(" ");
+// set array for user input
+let inputArray = []
 
 function madLibGenerator(){
     // call the function to create array
@@ -84,11 +87,36 @@ function madLibGenerator(){
     // check for missing space in input
     if(checkForMissingInput()){
         // output error if any of input is missing
+        // TODO: consider adding check against empty input as well
         document.getElementById("output1").value = "Enter all values above";
     } else{
         // call function to create the story
         createMLSentance();
     }
+}
 
-    //document.getElementById("output1").value = mLText
+// function for creating of input array
+function createInputArray(){
+    // cycle trhough input id's to read data
+    for(i = 0; i <=13; i++){
+        // there are 13 input id's - each checked with for loop
+        inputArray[i] = document.getElementById("i" + i).value;
+    }
+}
+
+// function that checks missing input
+function checkForMissingInput(){
+    // create an array with default strings in input
+    let defaultArrayVals = ["Person", "Noun", "Verb", "Adjective", "Plural Verb", "Body Part", "Event"];
+    // run for loop to check input array against any of the words in defautl array
+    for(i = 0; i < inputArray.length; i++){
+        // if there are no matches there will be a "-1" after comparison
+        // "indexOf" suggest that the comparison is done against all values of array
+        if(defaultArrayVals.indexOf(inputArray[i]) > -1){
+            // return true if input array value is not in default
+            return true;
+        }
+    }
+    // return false in other case
+    return false;
 }
