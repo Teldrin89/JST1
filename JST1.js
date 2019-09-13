@@ -120,3 +120,20 @@ function checkForMissingInput(){
     // return false in other case
     return false;
 }
+
+// function that creates the story by switching "~" with users words
+function createMLSentance(){
+    // set the argument index for input array to "0" for start
+    let arrIndex = 0;
+    // run for loop over each word in story array
+    for(i = 0; i < mLArray.length; i++){
+        // set the match index of story array to place where are "~"
+        let matchIndex = mLArray.indexOf("~");
+        // substitute "~" with input word (use arrIndex)
+        mLArray[matchIndex] = inputArray[arrIndex];
+        // increment arrIndex
+        arrIndex++;
+    }
+    // write down the story array after update
+    document.getElementById("output1").value = mLArray.join(" ");
+}
