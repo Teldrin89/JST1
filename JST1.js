@@ -71,3 +71,24 @@ function fib(whichNum){
     // result of function
     return num2;
 }
+
+// MadLib generator fuction - will return a story based on words put by user
+// define the text of the story - each "\n" means new line, each "~" is input
+let mLText = "My dear old ~ sat me down to hear some words of wisdom \n 1. Give a man  a ~ and you ~ him for a day ~ a man to ~ and he'll ~ forever \n 2. He who ~ at the right time can ~ again \n 3. Always wear ~ ~ in case you're in a ~ \n 4. Don't use your ~ to wipe your ~ Always have a clean ~ with you";
+
+// convert string into an array
+
+function madLibGenerator(){
+    // call the function to create array
+    createInputArray();
+    // check for missing space in input
+    if(checkForMissingInput()){
+        // output error if any of input is missing
+        document.getElementById("output1").value = "Enter all values above";
+    } else{
+        // call function to create the story
+        createMLSentance();
+    }
+
+    //document.getElementById("output1").value = mLText
+}
