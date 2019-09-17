@@ -126,6 +126,8 @@ function checkForMissingInput(){
 
 // function that creates the story by switching "~" with users words
 function createMLSentance(){
+    // 2nd time setting mL text back to original in case of 2nd use of mL fun.
+    let mLArray = mLText.split(" ");
     // set the argument index for input array to "0" for start
     let arrIndex = 0;
     // run for loop over each word in story array
@@ -138,6 +140,5 @@ function createMLSentance(){
         arrIndex++;
     }
     // write down the story array after update
-    // TODO: update the code to work also in case of 2nd and next runs
     document.getElementById("output1").value = mLArray.join(" ");
 }
